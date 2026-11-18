@@ -45,20 +45,61 @@
             <!-- Блок 1: вступ з анімацією появи -->
             <section class="block slide-in">
                 <h2>Наш каталог</h2>
-                <p>Шість сімейств ароматів — від свіжих цитрусів до теплої амбри. Наведіть курсор на картку, щоб побачити ціну та ноти.</p>
+                <p>30 ароматів у шести сімействах — від свіжих цитрусів до теплої амбри. Оберіть сімейство у фільтрі, а наведіть курсор на картку, щоб побачити ноти.</p>
                 <p>Не знаєте, що обрати? Почніть зі сторінки <a class="fx-link" href="notes.html">«Ноти»</a>.</p>
             </section>
 
-            <!-- Блок 2: картки товарів з hover-ефектами (transform + clip-path) -->
+            <!-- Блок 2: картки товарів з фільтром та hover-ефектами (transform + clip-path) -->
             <section class="block block-wide" id="products">
                 <h2>Аромати</h2>
+                <input type="radio" name="family" id="f-all" class="f-radio" checked>
+                <input type="radio" name="family" id="f-woody" class="f-radio">
+                <input type="radio" name="family" id="f-fresh" class="f-radio">
+                <input type="radio" name="family" id="f-amber" class="f-radio">
+                <input type="radio" name="family" id="f-citrus" class="f-radio">
+                <input type="radio" name="family" id="f-floral" class="f-radio">
+                <input type="radio" name="family" id="f-spicy" class="f-radio">
+                <!-- Фільтр за сімейством: radio + :checked, без JavaScript -->
+                <div class="filters">
+                    <label for="f-all">Усі</label>
+                    <label for="f-woody">Деревні</label>
+                    <label for="f-fresh">Свіжі</label>
+                    <label for="f-amber">Амброві</label>
+                    <label for="f-citrus">Цитрусові</label>
+                    <label for="f-floral">Квіткові</label>
+                    <label for="f-spicy">Пряні</label>
+                </div>
                 <div class="cards">
-                    <article class="card"><img src="images/woody.jpg" alt="Dior Sauvage EDP" width="600" height="600"><div class="card-info"><h3>Dior Sauvage EDP</h3><p>Бергамот, амброксан, ваніль</p><span class="price">4 900 ₴</span></div></article>
-                    <article class="card"><img src="images/citrus.jpg" alt="Creed Aventus" width="600" height="600"><div class="card-info"><h3>Creed Aventus</h3><p>Ананас, береза, мускус</p><span class="price">13 500 ₴</span></div></article>
-                    <article class="card"><img src="images/amber.jpg" alt="MFK Baccarat Rouge 540" width="600" height="600"><div class="card-info"><h3>Baccarat Rouge 540</h3><p>Шафран, амбра, кедр</p><span class="price">12 800 ₴</span></div></article>
-                    <article class="card"><img src="images/spicy.jpg" alt="JPG Le Male" width="600" height="600"><div class="card-info"><h3>JPG Le Male</h3><p>Лаванда, кориця, ваніль</p><span class="price">3 600 ₴</span></div></article>
-                    <article class="card"><img src="images/floral.jpg" alt="YSL Libre" width="600" height="600"><div class="card-info"><h3>YSL Libre</h3><p>Лаванда, апельсиновий цвіт</p><span class="price">4 400 ₴</span></div></article>
-                    <article class="card"><img src="images/fresh.jpg" alt="Acqua di Gio Profumo" width="600" height="600"><div class="card-info"><h3>Acqua di Gio Profumo</h3><p>Морські ноти, ладан</p><span class="price">4 200 ₴</span></div></article>
+                    <article class="card woody"><div class="card-media"><img src="images/woody.jpg" alt="Dior Sauvage EDP" width="600" height="600" loading="lazy"><div class="card-info"><p>Бергамот, амброксан, ваніль</p></div></div><h3>Dior Sauvage EDP</h3><span class="price">4 900 ₴</span></article>
+                    <article class="card woody"><div class="card-media"><img src="images/woody.jpg" alt="Bleu de Chanel EDP" width="600" height="600" loading="lazy"><div class="card-info"><p>Грейпфрут, ладан, кедр</p></div></div><h3>Bleu de Chanel EDP</h3><span class="price">5 600 ₴</span></article>
+                    <article class="card woody"><div class="card-media"><img src="images/woody.jpg" alt="Terre d'Hermès" width="600" height="600" loading="lazy"><div class="card-info"><p>Апельсин, ветивер, кремінь</p></div></div><h3>Terre d'Hermès</h3><span class="price">4 600 ₴</span></article>
+                    <article class="card woody"><div class="card-media"><img src="images/woody.jpg" alt="Tom Ford Oud Wood" width="600" height="600" loading="lazy"><div class="card-info"><p>Уд, сандал, кардамон</p></div></div><h3>Tom Ford Oud Wood</h3><span class="price">11 900 ₴</span></article>
+                    <article class="card woody"><div class="card-media"><img src="images/woody.jpg" alt="Le Labo Santal 33" width="600" height="600" loading="lazy"><div class="card-info"><p>Сандал, кедр, ірис</p></div></div><h3>Le Labo Santal 33</h3><span class="price">12 500 ₴</span></article>
+                    <article class="card fresh"><div class="card-media"><img src="images/fresh.jpg" alt="Acqua di Giò Profumo" width="600" height="600" loading="lazy"><div class="card-info"><p>Морські ноти, ладан, пачулі</p></div></div><h3>Acqua di Giò Profumo</h3><span class="price">4 200 ₴</span></article>
+                    <article class="card fresh"><div class="card-media"><img src="images/fresh.jpg" alt="Creed Silver Mountain Water" width="600" height="600" loading="lazy"><div class="card-info"><p>Чай, чорна смородина, мускус</p></div></div><h3>Creed Silver Mountain Water</h3><span class="price">12 000 ₴</span></article>
+                    <article class="card fresh"><div class="card-media"><img src="images/fresh.jpg" alt="Versace Dylan Blue" width="600" height="600" loading="lazy"><div class="card-info"><p>Бергамот, амброксан, ладан</p></div></div><h3>Versace Dylan Blue</h3><span class="price">3 300 ₴</span></article>
+                    <article class="card fresh"><div class="card-media"><img src="images/fresh.jpg" alt="L'Eau d'Issey pour Homme" width="600" height="600" loading="lazy"><div class="card-info"><p>Юдзу, водяні ноти, ветивер</p></div></div><h3>L'Eau d'Issey pour Homme</h3><span class="price">2 900 ₴</span></article>
+                    <article class="card fresh"><div class="card-media"><img src="images/fresh.jpg" alt="YSL Y EDP" width="600" height="600" loading="lazy"><div class="card-info"><p>Яблуко, шавлія, амбра</p></div></div><h3>YSL Y EDP</h3><span class="price">4 100 ₴</span></article>
+                    <article class="card amber"><div class="card-media"><img src="images/amber.jpg" alt="MFK Baccarat Rouge 540" width="600" height="600" loading="lazy"><div class="card-info"><p>Шафран, амбра, кедр</p></div></div><h3>MFK Baccarat Rouge 540</h3><span class="price">12 800 ₴</span></article>
+                    <article class="card amber"><div class="card-media"><img src="images/amber.jpg" alt="Tom Ford Tobacco Vanille" width="600" height="600" loading="lazy"><div class="card-info"><p>Тютюн, ваніль, какао</p></div></div><h3>Tom Ford Tobacco Vanille</h3><span class="price">11 800 ₴</span></article>
+                    <article class="card amber"><div class="card-media"><img src="images/amber.jpg" alt="Kilian Love, Don't Be Shy" width="600" height="600" loading="lazy"><div class="card-info"><p>Маршмелоу, флердоранж, ваніль</p></div></div><h3>Kilian Love, Don't Be Shy</h3><span class="price">10 500 ₴</span></article>
+                    <article class="card amber"><div class="card-media"><img src="images/amber.jpg" alt="Parfums de Marly Layton" width="600" height="600" loading="lazy"><div class="card-info"><p>Яблуко, ваніль, кардамон</p></div></div><h3>Parfums de Marly Layton</h3><span class="price">9 800 ₴</span></article>
+                    <article class="card amber"><div class="card-media"><img src="images/amber.jpg" alt="YSL Black Opium" width="600" height="600" loading="lazy"><div class="card-info"><p>Кава, ваніль, білі квіти</p></div></div><h3>YSL Black Opium</h3><span class="price">4 300 ₴</span></article>
+                    <article class="card citrus"><div class="card-media"><img src="images/citrus.jpg" alt="Creed Aventus" width="600" height="600" loading="lazy"><div class="card-info"><p>Ананас, береза, мускус</p></div></div><h3>Creed Aventus</h3><span class="price">13 500 ₴</span></article>
+                    <article class="card citrus"><div class="card-media"><img src="images/citrus.jpg" alt="Acqua di Parma Colonia" width="600" height="600" loading="lazy"><div class="card-info"><p>Лимон, лаванда, розмарин</p></div></div><h3>Acqua di Parma Colonia</h3><span class="price">6 200 ₴</span></article>
+                    <article class="card citrus"><div class="card-media"><img src="images/citrus.jpg" alt="Tom Ford Neroli Portofino" width="600" height="600" loading="lazy"><div class="card-info"><p>Неролі, бергамот, амбра</p></div></div><h3>Tom Ford Neroli Portofino</h3><span class="price">11 500 ₴</span></article>
+                    <article class="card citrus"><div class="card-media"><img src="images/citrus.jpg" alt="Hermès Un Jardin sur le Nil" width="600" height="600" loading="lazy"><div class="card-info"><p>Зелений манго, лотос, грейпфрут</p></div></div><h3>Hermès Un Jardin sur le Nil</h3><span class="price">4 800 ₴</span></article>
+                    <article class="card citrus"><div class="card-media"><img src="images/citrus.jpg" alt="Jo Malone Lime Basil & Mandarin" width="600" height="600" loading="lazy"><div class="card-info"><p>Лайм, базилік, мандарин</p></div></div><h3>Jo Malone Lime Basil & Mandarin</h3><span class="price">5 400 ₴</span></article>
+                    <article class="card floral"><div class="card-media"><img src="images/floral.jpg" alt="YSL Libre" width="600" height="600" loading="lazy"><div class="card-info"><p>Лаванда, апельсиновий цвіт, ваніль</p></div></div><h3>YSL Libre</h3><span class="price">4 400 ₴</span></article>
+                    <article class="card floral"><div class="card-media"><img src="images/floral.jpg" alt="Chanel Coco Mademoiselle" width="600" height="600" loading="lazy"><div class="card-info"><p>Апельсин, троянда, пачулі</p></div></div><h3>Chanel Coco Mademoiselle</h3><span class="price">5 900 ₴</span></article>
+                    <article class="card floral"><div class="card-media"><img src="images/floral.jpg" alt="Dior Miss Dior EDP" width="600" height="600" loading="lazy"><div class="card-info"><p>Конвалія, троянда, ваніль</p></div></div><h3>Dior Miss Dior EDP</h3><span class="price">5 200 ₴</span></article>
+                    <article class="card floral"><div class="card-media"><img src="images/floral.jpg" alt="Lancôme La Vie Est Belle" width="600" height="600" loading="lazy"><div class="card-info"><p>Ірис, праліне, ваніль</p></div></div><h3>Lancôme La Vie Est Belle</h3><span class="price">4 500 ₴</span></article>
+                    <article class="card floral"><div class="card-media"><img src="images/floral.jpg" alt="Gucci Bloom" width="600" height="600" loading="lazy"><div class="card-info"><p>Тубероза, жасмин, мускус</p></div></div><h3>Gucci Bloom</h3><span class="price">4 200 ₴</span></article>
+                    <article class="card spicy"><div class="card-media"><img src="images/spicy.jpg" alt="JPG Le Male" width="600" height="600" loading="lazy"><div class="card-info"><p>Лаванда, кориця, ваніль</p></div></div><h3>JPG Le Male</h3><span class="price">3 600 ₴</span></article>
+                    <article class="card spicy"><div class="card-media"><img src="images/spicy.jpg" alt="Viktor&Rolf Spicebomb Extreme" width="600" height="600" loading="lazy"><div class="card-info"><p>Тютюн, кориця, ваніль</p></div></div><h3>Viktor&Rolf Spicebomb Extreme</h3><span class="price">4 500 ₴</span></article>
+                    <article class="card spicy"><div class="card-media"><img src="images/spicy.jpg" alt="YSL La Nuit de L'Homme" width="600" height="600" loading="lazy"><div class="card-info"><p>Кардамон, лаванда, кедр</p></div></div><h3>YSL La Nuit de L'Homme</h3><span class="price">3 900 ₴</span></article>
+                    <article class="card spicy"><div class="card-media"><img src="images/spicy.jpg" alt="Valentino Born in Roma Intense" width="600" height="600" loading="lazy"><div class="card-info"><p>Ваніль, лаванда, ветивер</p></div></div><h3>Valentino Born in Roma Intense</h3><span class="price">4 300 ₴</span></article>
+                    <article class="card spicy"><div class="card-media"><img src="images/spicy.jpg" alt="Armani Stronger With You Intensely" width="600" height="600" loading="lazy"><div class="card-info"><p>Рожевий перець, каштан, ваніль</p></div></div><h3>Armani Stronger With You Intensely</h3><span class="price">3 800 ₴</span></article>
                 </div>
             </section>
 
@@ -79,6 +120,11 @@
                     <input type="checkbox" id="faq3" class="acc-toggle">
                     <label for="faq3">Скільки йде доставка?</label>
                     <div class="acc-body"><p>Нова Пошта — 1–3 дні по Україні, до Європи — 5–10 днів.</p></div>
+                </div>
+                <div class="acc-item">
+                    <input type="checkbox" id="faq4" class="acc-toggle">
+                    <label for="faq4">Чи є пробники?</label>
+                    <div class="acc-body"><p>Так, будь-який аромат з каталогу можна замовити як пробник 2 мл або розпив 10 мл.</p></div>
                 </div>
             </section>
         </div>
