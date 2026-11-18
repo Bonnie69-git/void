@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Каталог ароматів VOID з цінами та нотами.">
+    <meta name="author" content="Рауль Багратіони">
+    <title>Каталог — VOID</title>
+    <!-- Єдиний зовнішній файл стилів CSS3 -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body id="top">
+    <!-- Екран завантаження: зникає через @keyframes, без JavaScript -->
+    <div class="preloader" aria-hidden="true"><span>VOID</span></div>
+
+    <!-- Шапка: position: fixed -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo"><img src="images/logo.png" alt="Логотип VOID" width="160" height="40"></a>
+            <p class="site-title">Парфумерія VOID</p>
+            <!-- Навігація: flexbox + transition -->
+            <nav class="site-nav">
+                <ul>
+                    <li><a href="index.html">Головна</a></li>
+                    <li class="has-dropdown">
+                        <a href="catalog.html" class="active">Каталог ▾</a>
+                        <!-- Випадаюче меню: висувається через transform: translateY -->
+                        <ul class="dropdown">
+                            <li><a href="catalog.html#products">Усі аромати</a></li>
+                            <li><a href="notes.html#families">Сімейства</a></li>
+                            <li><a href="catalog.html#faq">Як замовити</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="notes.html">Ноти</a></li>
+                    <li><a href="blog.html">Блог</a></li>
+                    <li><a href="contacts.html">Контакти</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1 class="page-title">Каталог ароматів</h1>
+        <div class="blocks">
+            <!-- Блок 1: вступ з анімацією появи -->
+            <section class="block slide-in">
+                <h2>Наш каталог</h2>
+                <p>Шість сімейств ароматів — від свіжих цитрусів до теплої амбри. Наведіть курсор на картку, щоб побачити ціну та ноти.</p>
+                <p>Не знаєте, що обрати? Почніть зі сторінки <a class="fx-link" href="notes.html">«Ноти»</a>.</p>
+            </section>
+
+            <!-- Блок 2: картки товарів з hover-ефектами (transform + clip-path) -->
+            <section class="block block-wide" id="products">
+                <h2>Аромати</h2>
+                <div class="cards">
+                    <article class="card"><img src="images/woody.jpg" alt="Dior Sauvage EDP" width="600" height="600"><div class="card-info"><h3>Dior Sauvage EDP</h3><p>Бергамот, амброксан, ваніль</p><span class="price">4 900 ₴</span></div></article>
+                    <article class="card"><img src="images/citrus.jpg" alt="Creed Aventus" width="600" height="600"><div class="card-info"><h3>Creed Aventus</h3><p>Ананас, береза, мускус</p><span class="price">13 500 ₴</span></div></article>
+                    <article class="card"><img src="images/amber.jpg" alt="MFK Baccarat Rouge 540" width="600" height="600"><div class="card-info"><h3>Baccarat Rouge 540</h3><p>Шафран, амбра, кедр</p><span class="price">12 800 ₴</span></div></article>
+                    <article class="card"><img src="images/spicy.jpg" alt="JPG Le Male" width="600" height="600"><div class="card-info"><h3>JPG Le Male</h3><p>Лаванда, кориця, ваніль</p><span class="price">3 600 ₴</span></div></article>
+                    <article class="card"><img src="images/floral.jpg" alt="YSL Libre" width="600" height="600"><div class="card-info"><h3>YSL Libre</h3><p>Лаванда, апельсиновий цвіт</p><span class="price">4 400 ₴</span></div></article>
+                    <article class="card"><img src="images/fresh.jpg" alt="Acqua di Gio Profumo" width="600" height="600"><div class="card-info"><h3>Acqua di Gio Profumo</h3><p>Морські ноти, ладан</p><span class="price">4 200 ₴</span></div></article>
+                </div>
+            </section>
+
+            <!-- Блок 3: акордеон (анімація висоти через max-height) -->
+            <section class="block" id="faq">
+                <h2>Як замовити</h2>
+                <div class="acc-item">
+                    <input type="checkbox" id="faq1" class="acc-toggle">
+                    <label for="faq1">Як оформити замовлення?</label>
+                    <div class="acc-body"><p>Напишіть нам у Telegram або через форму на сторінці контактів — підтвердимо наявність за кілька годин.</p></div>
+                </div>
+                <div class="acc-item">
+                    <input type="checkbox" id="faq2" class="acc-toggle">
+                    <label for="faq2">Як оплатити?</label>
+                    <div class="acc-body"><p>Онлайн-оплата карткою, Apple Pay чи Google Pay через платіжну систему WayForPay.</p></div>
+                </div>
+                <div class="acc-item">
+                    <input type="checkbox" id="faq3" class="acc-toggle">
+                    <label for="faq3">Скільки йде доставка?</label>
+                    <div class="acc-body"><p>Нова Пошта — 1–3 дні по Україні, до Європи — 5–10 днів.</p></div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Футер: соціальні іконки з анімацією bounce -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>&copy; 2026 Рауль Багратіони · VOID</p>
+            <ul class="social">
+                <li><a href="https://t.me/" target="_blank" rel="noopener" aria-label="Telegram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 11.5 21 4l-3 16-6-4.5-3 3v-5l9-8-11 6.5z"/></svg></a></li>
+                <li><a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.3" cy="6.7" r="1.3"/></svg></a></li>
+                <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h3c.3 2.2 1.7 3.6 4 4v3c-1.6 0-3-.5-4-1.2V15a6 6 0 1 1-6-6v3.2A2.8 2.8 0 1 0 14 15z"/></svg></a></li>
+            </ul>
+            <p class="created">Створено: <time datetime="2026-11-18">18.11.2026</time></p>
+        </div>
+    </footer>
+
+    <!-- Кнопка «вгору»: плавний скрол через scroll-behavior: smooth -->
+    <a href="#top" class="to-top" aria-label="Нагору">↑</a>
+</body>
+</html>

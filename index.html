@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="VOID — онлайн-магазин парфумерії з мінімалістичним характером.">
+    <meta name="author" content="Рауль Багратіони">
+    <title>Головна — VOID</title>
+    <!-- Єдиний зовнішній файл стилів CSS3 -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body id="top">
+    <!-- Екран завантаження: зникає через @keyframes, без JavaScript -->
+    <div class="preloader" aria-hidden="true"><span>VOID</span></div>
+
+    <!-- Шапка: position: fixed -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo"><img src="images/logo.png" alt="Логотип VOID" width="160" height="40"></a>
+            <p class="site-title">Парфумерія VOID</p>
+            <!-- Навігація: flexbox + transition -->
+            <nav class="site-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Головна</a></li>
+                    <li class="has-dropdown">
+                        <a href="catalog.html">Каталог ▾</a>
+                        <!-- Випадаюче меню: висувається через transform: translateY -->
+                        <ul class="dropdown">
+                            <li><a href="catalog.html#products">Усі аромати</a></li>
+                            <li><a href="notes.html#families">Сімейства</a></li>
+                            <li><a href="catalog.html#faq">Як замовити</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="notes.html">Ноти</a></li>
+                    <li><a href="blog.html">Блог</a></li>
+                    <li><a href="contacts.html">Контакти</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1 class="page-title">Вітаємо у VOID</h1>
+        <img class="hero" src="images/hero.jpg" alt="Три флакони VOID" width="1200" height="520">
+        <div class="blocks">
+            <!-- Блок 1: текст з анімацією slide-in -->
+            <section class="block slide-in">
+                <h2>Ласкаво просимо</h2>
+                <p>VOID — онлайн-магазин парфумерії з мінімалістичним характером: чорний, золото й нічого зайвого. Ми допомагаємо підібрати аромат під настрій, сезон і ситуацію.</p>
+                <p>Перегляньте <a class="fx-link" href="catalog.html">каталог ароматів</a> або почитайте <a class="fx-link" href="blog.html">наш блог</a>.</p>
+            </section>
+
+            <!-- Блок 2: зображення з трансформаціями при наведенні -->
+            <section class="block">
+                <h2>Хіти сезону</h2>
+                <div class="tiles">
+                    <figure class="tile"><img src="images/woody.jpg" alt="Деревний аромат" width="600" height="600"><figcaption>Деревні</figcaption></figure>
+                    <figure class="tile"><img src="images/amber.jpg" alt="Амбровий аромат" width="600" height="600"><figcaption>Амброві</figcaption></figure>
+                    <figure class="tile"><img src="images/fresh.jpg" alt="Свіжий аромат" width="600" height="600"><figcaption>Свіжі</figcaption></figure>
+                </div>
+            </section>
+
+            <!-- Блок 3: анімовані прогрес-бари -->
+            <section class="block">
+                <h2>VOID у цифрах</h2>
+                <ul class="bars">
+                    <li><span class="bar-label">Перевірені флакони<b>100%</b></span><span class="bar"><span class="bar-fill" style="--w: 100%"></span></span></li>
+                    <li><span class="bar-label">Задоволені клієнти<b>96%</b></span><span class="bar"><span class="bar-fill" style="--w: 96%"></span></span></li>
+                    <li><span class="bar-label">Відправка за 48 год<b>90%</b></span><span class="bar"><span class="bar-fill" style="--w: 90%"></span></span></li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <!-- Футер: соціальні іконки з анімацією bounce -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>&copy; 2026 Рауль Багратіони · VOID</p>
+            <ul class="social">
+                <li><a href="https://t.me/" target="_blank" rel="noopener" aria-label="Telegram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 11.5 21 4l-3 16-6-4.5-3 3v-5l9-8-11 6.5z"/></svg></a></li>
+                <li><a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.3" cy="6.7" r="1.3"/></svg></a></li>
+                <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h3c.3 2.2 1.7 3.6 4 4v3c-1.6 0-3-.5-4-1.2V15a6 6 0 1 1-6-6v3.2A2.8 2.8 0 1 0 14 15z"/></svg></a></li>
+            </ul>
+            <p class="created">Створено: <time datetime="2026-11-18">18.11.2026</time></p>
+        </div>
+    </footer>
+
+    <!-- Кнопка «вгору»: плавний скрол через scroll-behavior: smooth -->
+    <a href="#top" class="to-top" aria-label="Нагору">↑</a>
+</body>
+</html>
