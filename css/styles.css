@@ -919,6 +919,22 @@ main {
     .site-title {
         font-size: 0.65rem;
     }
+    /* На мобільних випадаюче меню приховано, пункт веде на сторінку каталогу */
+    .dropdown {
+        display: none;
+    }
+    /* Блоки стають вертикальними */
+    .blocks {
+        display: flex;
+        flex-direction: column;
+    }
+    .block {
+        width: 100%;
+    }
+    .cards {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+    }
     /* На сенсорних екранах ноти аромату видимі одразу */
     .card-info {
         position: static;
