@@ -7,7 +7,7 @@
     <meta name="author" content="Рауль Багратіони">
     <title>Блог — VOID</title>
     <!-- Єдиний зовнішній файл стилів CSS3 -->
-    <link rel="stylesheet" href="css/styles.css?v=8">
+    <link rel="stylesheet" href="css/styles.css?v=9">
 </head>
 <body id="top">
     <!-- Екран завантаження: зникає через @keyframes, без JavaScript -->
@@ -53,15 +53,63 @@
             </section>
 
             <!-- Блок 2: статті з hover-ефектами на посиланнях та зображеннях -->
-            <section class="block block-wide">
+            <section class="block block-wide" id="posts">
                 <h2>Нові статті</h2>
                 <div class="posts">
-                    <article class="post"><img src="images/about.jpg" alt="Коробка VOID" width="800" height="600"><div><h3><a class="fx-link" href="blog.html#post1" id="post1">EDT чи EDP: у чому різниця</a></h3><p>Концентрація олій, стійкість і шлейф — коротко.</p></div></article>
-                    <article class="post"><img src="images/amber.jpg" alt="Амбровий аромат" width="600" height="600"><div><h3><a class="fx-link" href="blog.html#post2" id="post2">5 ароматів на зиму</a></h3><p>Теплі амброві та пряні композиції для холодних днів.</p></div></article>
-                    <article class="post"><img src="images/fresh.jpg" alt="Свіжий аромат" width="600" height="600"><div><h3><a class="fx-link" href="blog.html#post3" id="post3">Як зберігати парфуми</a></h3><p>Чому ванна — найгірше місце для флакона.</p></div></article>
+                    <article class="post"><img src="images/about.jpg" alt="Три флакони VOID" width="800" height="600"><div><h3><a class="fx-link" href="#a1">EDT чи EDP: у чому різниця</a></h3><p>Концентрація олій, стійкість і шлейф — коротко.</p></div></article>
+                    <article class="post"><img src="images/amber.jpg" alt="Амбровий аромат" width="600" height="600"><div><h3><a class="fx-link" href="#a2">5 ароматів на зиму</a></h3><p>Теплі амброві та пряні композиції для холодних днів.</p></div></article>
+                    <article class="post"><img src="images/fresh.jpg" alt="Свіжий аромат" width="600" height="600"><div><h3><a class="fx-link" href="#a3">Як зберігати парфуми</a></h3><p>Чому ванна — найгірше місце для флакона.</p></div></article>
                 </div>
             </section>
 
+                <!-- Стаття у вікні: відкривається через :target, без JavaScript -->
+                <div class="modal" id="a1">
+                    <a href="#posts" class="modal-bg" aria-label="Закрити"></a>
+                    <div class="modal-box modal-article">
+                        <a href="#posts" class="modal-close" aria-label="Закрити">×</a>
+                        <img src="images/about.jpg" alt="EDT чи EDP: у чому різниця" width="600" height="600" loading="lazy">
+                        <div class="modal-text">
+                            <span class="modal-family">Основи</span>
+                            <h3>EDT чи EDP: у чому різниця</h3>
+                            <p>Головна різниця — концентрація ароматичних олій. В туалетній воді (EDT) їх 5–15%, у парфумованій (EDP) — 15–20%, а в Parfum / Extrait — від 20%.</p>
+                            <p>Чим вища концентрація, тим довше аромат тримається на шкірі: EDT — 3–5 годин, EDP — 6–8 годин. Шлейф у EDP зазвичай щільніший і тепліший.</p>
+                            <p>Часто EDT і EDP одного аромату звучать по-різному: туалетна вода свіжіша й легша, парфумована — глибша й солодша. Тому перед покупкою варто спробувати обидві версії — замовте пробники в нашому каталозі.</p>
+                            <a class="btn-ghost" href="catalog.html">Перейти до каталогу</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Стаття у вікні: відкривається через :target, без JavaScript -->
+                <div class="modal" id="a2">
+                    <a href="#posts" class="modal-bg" aria-label="Закрити"></a>
+                    <div class="modal-box modal-article">
+                        <a href="#posts" class="modal-close" aria-label="Закрити">×</a>
+                        <img src="images/amber.jpg" alt="5 ароматів на зиму" width="600" height="600" loading="lazy">
+                        <div class="modal-text">
+                            <span class="modal-family">Підбірка</span>
+                            <h3>5 ароматів на зиму</h3>
+                            <p>Взимку легкі цитрусові аромати швидко «зникають» на холоді, тому краще обирати теплі амброві, пряні та деревні композиції.</p>
+                            <p>Наші фаворити сезону: MFK Baccarat Rouge 540 (шафран і амбра), Tom Ford Tobacco Vanille (тютюн і ваніль), Viktor&Rolf Spicebomb Extreme (кориця й тютюн), JPG Le Male (лаванда й ваніль) та Parfums de Marly Layton (яблуко, кардамон, ваніль).</p>
+                            <p>Наносьте зимові аромати помірно: 2–3 пшики достатньо, бо в теплому приміщенні вони розкриваються значно сильніше.</p>
+                            <a class="btn-ghost" href="catalog.html">Перейти до каталогу</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Стаття у вікні: відкривається через :target, без JavaScript -->
+                <div class="modal" id="a3">
+                    <a href="#posts" class="modal-bg" aria-label="Закрити"></a>
+                    <div class="modal-box modal-article">
+                        <a href="#posts" class="modal-close" aria-label="Закрити">×</a>
+                        <img src="images/fresh.jpg" alt="Як зберігати парфуми" width="600" height="600" loading="lazy">
+                        <div class="modal-text">
+                            <span class="modal-family">Догляд</span>
+                            <h3>Як зберігати парфуми</h3>
+                            <p>Ворогів у парфумів три: світло, тепло й перепади вологості. Саме тому ванна кімната — найгірше місце для флакона: там постійно змінюються температура й вологість.</p>
+                            <p>Найкраще зберігати парфуми в оригінальній коробці, у шафі чи комоді, при кімнатній температурі й подалі від вікна.</p>
+                            <p>Правильно збережений аромат залишається незмінним 3–5 років. Якщо запах став різким або «кислим», а колір рідини помітно потемнів — аромат окислився.</p>
+                            <a class="btn-ghost" href="catalog.html">Перейти до каталогу</a>
+                        </div>
+                    </div>
+                </div>
             <!-- Блок 3: акордеон з популярними питаннями -->
             <section class="block">
                 <h2>Часті питання</h2>

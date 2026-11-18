@@ -621,6 +621,15 @@ main {
     transform: none;
 }
 
+.modal-article {
+    max-width: 52rem;
+}
+
+.modal-article img {
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
 .modal-box img {
     width: 100%;
     height: auto;
