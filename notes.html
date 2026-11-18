@@ -7,7 +7,7 @@
     <meta name="author" content="Рауль Багратіони">
     <title>Ноти — VOID</title>
     <!-- Єдиний зовнішній файл стилів CSS3 -->
-    <link rel="stylesheet" href="css/styles.css?v=5">
+    <link rel="stylesheet" href="css/styles.css?v=6">
 </head>
 <body id="top">
     <!-- Екран завантаження: зникає через @keyframes, без JavaScript -->
@@ -23,7 +23,10 @@
                 <ul>
                     <li><a href="index.html">Головна</a></li>
                     <li class="has-dropdown">
-                        <a href="catalog.html">Каталог ▾</a>
+                        <a href="catalog.html">Каталог</a>
+                        <!-- Перемикач для сенсорних екранів: checkbox + label, без JavaScript -->
+                        <input type="checkbox" id="dd-toggle" class="dd-toggle">
+                        <label for="dd-toggle" class="dd-btn" title="Розділи каталогу">▾</label>
                         <!-- Випадаюче меню: висувається через transform: translateY -->
                         <ul class="dropdown">
                             <li><a href="catalog.html#products">Усі аромати</a></li>

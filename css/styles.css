@@ -189,6 +189,35 @@ body {
 /* Коментар: dropdown-меню висувається через translateY */
 .has-dropdown {
     position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Коментар: кнопка-стрілка відкриває меню на телефоні (checkbox hack) */
+.dd-toggle {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.dd-btn {
+    padding: 0.3rem 0.35rem;
+    color: var(--gold);
+    font-size: 0.8rem;
+    cursor: pointer;
+    -webkit-transition: -webkit-transform 0.3s ease;
+    transition: transform 0.3s ease;
+}
+
+.dd-toggle:checked + .dd-btn,
+.has-dropdown:hover .dd-btn {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.dd-toggle:focus-visible + .dd-btn {
+    outline: 1px solid var(--gold);
+    border-radius: 0.3rem;
 }
 
 .dropdown {
@@ -211,7 +240,8 @@ body {
 }
 
 .has-dropdown:hover .dropdown,
-.has-dropdown:focus-within .dropdown {
+.has-dropdown:focus-within .dropdown,
+.dd-toggle:checked ~ .dropdown {
     opacity: 1;
     visibility: visible;
     -webkit-transform: translateY(0.4rem);
@@ -905,7 +935,6 @@ main {
     .site-nav {
         margin-left: 0;
         width: 100%;
-        overflow-x: auto;
     }
     .site-nav ul {
         justify-content: space-between;
@@ -919,9 +948,9 @@ main {
     .site-title {
         font-size: 0.65rem;
     }
-    /* На мобільних випадаюче меню приховано, пункт веде на сторінку каталогу */
-    .dropdown {
-        display: none;
+    .dd-btn {
+        padding: 0.45rem 0.4rem;
+        font-size: 0.85rem;
     }
     /* Блоки стають вертикальними */
     .blocks {
@@ -956,14 +985,6 @@ main {
     .footer-inner {
         flex-direction: column;
         align-items: flex-start;
-    }
-}
-
-/* Коментар: на сенсорних екранах (без hover) dropdown не показуємо —
-   натискання на «Каталог» одразу відкриває сторінку каталогу */
-@media (hover: none) {
-    .dropdown {
-        display: none;
     }
 }
 
